@@ -14,13 +14,13 @@ config()
 
 set('strictQuery' , false)
 
-app.use('/customer/', CustomerRouter)
-app.use('/product/', ProductRouter)
-app.use('/orders/', OrderRouter)
 
 const port = process.env.PORT
 const mongo_db = process.env.MONGO_DB
 
+app.use('/customer/', CustomerRouter)
+app.use('/product/', ProductRouter)
+app.use('/orders/', OrderRouter)
 
 
 const start = async () => {
