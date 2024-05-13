@@ -48,7 +48,7 @@ ProductRouter.delete('/:id/', async (request, response) => {
 
     const {id} = request.params
 
-    await Product.findByIdAndDelete(id, request.body)
+    await Product.findByIdAndDelete(id)
 
     response.json("Data Deleted")
 
